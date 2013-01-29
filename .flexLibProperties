@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="net.khaledgarbaya.instagras.core.AbstractInstagras"/>
+    <classEntry path="net.khaledgarbaya.instagras.core.InstagrasURLDefaults"/>
+    <classEntry path="net.khaledgarbaya.instagras.data.InstagrasSession"/>
+    <classEntry path="net.khaledgarbaya.instagras.data.InstagrasAuthResponse"/>
+    <classEntry path="net.khaledgarbaya.instagras.Instagras"/>
+    <classEntry path="net.khaledgarbaya.instagras.utils.InstagrasRequestMethod"/>
+    <classEntry path="net.khaledgarbaya.instagras.net.AbstractIntagrasRequest"/>
+    <classEntry path="net.khaledgarbaya.instagras.net.InstagrasRequest"/>
+    <classEntry path="net.khaledgarbaya.instagras.core.InstagrasJSBridge"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
