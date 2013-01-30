@@ -73,6 +73,11 @@ package net.khaledgarbaya.instagras
 					'Instagras is a singleton and cannot be instantiated.'
 				);
 			}
+			jsBridge = new InstagrasJSBridge(); //create an instance
+			
+			jsCallbacks = {};
+			
+			openUICalls = new Dictionary();
 		}
 		public static function init(applicationId:String,
 									callback:Function = null,
@@ -112,7 +117,7 @@ package net.khaledgarbaya.instagras
 		protected function login(callback:Function, options:Object = null):void {
 			_loginCallback = callback;
 			
-			ExternalInterface.call('IG.login', JSON.stringify(options));
+			ExternalInterface.call('IGAS.login', JSON.stringify(options));
 		}
 		/**
 		 * @private
@@ -120,7 +125,7 @@ package net.khaledgarbaya.instagras
 		 */
 		protected function logout(callback:Function):void {
 			_logoutCallback = callback;      
-			ExternalInterface.call('IG.logout');
+			ExternalInterface.call('IGAS.logout');
 		}		
 		
 		public static function getRawResult(data:Object):Object {			
@@ -163,7 +168,7 @@ package net.khaledgarbaya.instagras
 		 *
 		 */
 		protected function getLoginStatus():void {
-			ExternalInterface.call('IG.getLoginStatus');
+			ExternalInterface.call('IGAS.getLoginStatus');
 		}
 		protected function init(applicationId:String,
 								callback:Function = null,
@@ -183,9 +188,10 @@ package net.khaledgarbaya.instagras
 			
 			if (options == null) { options = {};}
 			options.appId = applicationId;
-			options.oauth = true;
+			options.check_status = true;
+			options.cookie = true;
 			
-			ExternalInterface.call('IG.init', JSON.stringify(options));
+			ExternalInterface.call('IGAS.init', JSON.stringify(options));
 			
 			if (accessToken != null) {
 				authResponse = new InstagrasAuthResponse();
