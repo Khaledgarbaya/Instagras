@@ -2,7 +2,7 @@
 
 What is Instagras ?
 -------------------
-Instagras (Intagram for AS) is an actionscript 3 library to help you create intagram content driven application using the flash platform.
+Instagras (Instagram for AS) is an actionscript 3 library to help you create intagram content driven application using the flash platform.
 All the api Calls is through the Instagras Class.
 
 How to use it?
