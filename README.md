@@ -45,7 +45,7 @@ How to use it?
       
 LICENCE
 -------
-* this code is open source and feel free to use it modify , I will be glad to receive a mail from you first a khaledgarbaya@gmail.com
+* this code is open source and feel free to use it modify , I will be glad to receive at mail from you first a khaledgarbaya@gmail.com
 * Feel Free to report any issue or bug I'll be glad to try to fix it for you
 
 Upcoming Features
