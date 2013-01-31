@@ -22,26 +22,33 @@ How to use it?
       
       //login
       	protected function login():void
-  			{
+  	{
   			
                   Instagras.login(loginCallBack,{client_id:appID,
-  				        response_type:"code",//the redirect uri will be http://yoursite.com/#access_token
-  								redirect_uri:"REDIRECT_URI",
-  								scope: 'likes+comments'});
-  			}
+  				  response_type:"code",//the redirect uri will be http://yoursite.com/#access_token
+  			          redirect_uri:"REDIRECT_URI",
+  				  scope: 'likes+comments'});
+  	}
 		  
       //after the login
         private function loginCallBack(result:Object, failt:Object):void
-  			{
-              //login callback			  
-  			}
-      
-		  //init callback
+  	{
+              //login callback	
+              //no you can use the Instagras.api("method") to get some data for example
+              Intagras.api("users/self",apiCallBack)
+  	}
+      	private function apiCallBack(result:Object, fail:Object):void
+      	{
+      		//the data will be stored into the result object
+      	
+      	}
+	//init callback
         private function initCallBack(result:Object, fail:Object):void
-  			{
-  			  	  if(result == null);//the class have the access token and ready to use it
-                 login();
-  			}
+  	{
+  	  	  
+  	  	  if(result == null);//the class have the access token and ready to use it
+ 			login();
+  	}
       
 LICENCE
 -------
