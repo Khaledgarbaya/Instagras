@@ -52,9 +52,22 @@ How to use it?
       
 LICENCE
 -------
-* this code is open source and feel free to use it modify , I will be glad to receive at mail from you first at  khaledgarbaya@gmail.com
-* Feel Free to report any issue or bug I'll be glad to try to fix it for you
-* Copyright  © [Khaled Garbaya](http://khaledgarbaya.net/)
+Simplified BSD License
+======================
+
+* Copyright 2013 [Khaled Garbaya](http://khaledgarbaya.net/) . All rights reserved.
+
+* Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice, this list of
+      conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice, this list
+      of conditions and the following disclaimer in the documentation and/or other materials
+      provided with the distribution.
+
+
 
 Upcoming Features
 -----------------
