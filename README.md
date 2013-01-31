@@ -50,7 +50,7 @@ How to use it?
  			login();
   	}
       
-LICENCE
+LICENSE
 -------
 Simplified BSD License
 ======================
