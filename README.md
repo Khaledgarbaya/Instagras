@@ -9,7 +9,7 @@ How to use it?
 --------------
 1.clone the repo at  : 'https://github.com/Khaledgarbaya/Instagras.git'
 
-2.The main class that you'll be working with is the Instagras Call.It Static so you don't need to instantiate it.
+2.The main class that you'll be working with is the Instagras Class.It Static so you don't need to instantiate it.
 
 3.Sample code : 
   		
