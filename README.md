@@ -1,54 +1,37 @@
-#Instagras : Instagram ActionScript 3 library
+import net.khaledgarbaya.instagras.Instagras;
 
-What is Instagras ?
--------------------
-Instagras (Instagram for AS) is an actionscript 3 library to help you create intagram content driven application using the flash platform.
-All the api Calls is through the Instagras Class.
+    private var appID:String="CLIENT_ID";
 
-How to use it?
---------------
-1.clone the repo at  : 'https://github.com/Khaledgarbaya/Instagras.git'
+    // init the api
+    Instagras.init(appID,initCallBack);
 
-2.The main class that you'll be working with is the Instagras Class.It Static so you don't need to instantiate it.
+    //login
+    protected function login():void
+    {
+      Instagras.login(loginCallBack,{client_id:appID,
+      response_type:"code",//the redirect uri will be http://yoursite.com/#access_token
+      redirect_uri:"REDIRECT_URI",
+      scope: 'likes+comments'});
+    }
 
-3.Sample code : 
-  		
-      import net.khaledgarbaya.instagras.Instagras;
-			
-      private var appID:String="CLIENT_ID";
+    //after the login
+    private function loginCallBack(result:Object, failt:Object):void
+    {
+      //login callback	
+      //no you can use the Instagras.api("method") to get some data for example
+      Intagras.api("users/self",apiCallBack)
+    }
+    private function apiCallBack(result:Object, fail:Object):void
+    {
+      //the data will be stored into the result object
 
-      // init the api
-      Instagras.init(appID,initCallBack);
-      
-      //login
-      	protected function login():void
-  	{
-  			
-                  Instagras.login(loginCallBack,{client_id:appID,
-  				  response_type:"code",//the redirect uri will be http://yoursite.com/#access_token
-  			          redirect_uri:"REDIRECT_URI",
-  				  scope: 'likes+comments'});
-  	}
-		  
-      //after the login
-        private function loginCallBack(result:Object, failt:Object):void
-  	{
-              //login callback	
-              //no you can use the Instagras.api("method") to get some data for example
-              Intagras.api("users/self",apiCallBack)
-  	}
-      	private function apiCallBack(result:Object, fail:Object):void
-      	{
-      		//the data will be stored into the result object
-      	
-      	}
-	//init callback
-        private function initCallBack(result:Object, fail:Object):void
-  	{
-  	  	  
-  	  	  if(result == null);//the class have the access token and ready to use it
- 			login();
-  	}
+    }
+    //init callback
+    private function initCallBack(result:Object, fail:Object):void
+    {
+      if(result == null);//the class have the access token and ready to use it
+      login();
+    }
       
 LICENSE
 -------
