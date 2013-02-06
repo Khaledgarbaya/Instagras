@@ -1,4 +1,5 @@
-import net.khaledgarbaya.instagras.Instagras;
+##Sample Code
+    import net.khaledgarbaya.instagras.Instagras;
 
     private var appID:String="CLIENT_ID";
 
