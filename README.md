@@ -1,4 +1,16 @@
-##Sample Code
+#Instagras : Instagram ActionScript 3 library
+What is Instagras ?
+-------------------
+Instagras (Instagram for AS) is an actionscript 3 library to help you create intagram content driven application using the flash platform. All the api Calls is through the Instagras Class.
+
+How to use it?
+-------------
+1.clone the repo at : 'https://github.com/Khaledgarbaya/Instagras.git'
+
+2.The main class that you'll be working with is the Instagras Call.It Static so you don't need to instantiate it.
+
+3.Sample code :    
+    
     import net.khaledgarbaya.instagras.Instagras;
 
     private var appID:String="CLIENT_ID";
