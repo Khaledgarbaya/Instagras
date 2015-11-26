@@ -42,7 +42,7 @@ How to use it?
     //init callback
     private function initCallBack(result:Object, fail:Object):void
     {
-      if(result == null);//the class have the access token and ready to use it
+      if(result != null);//the class has the access token and ready to use it
       login();
     }
       
