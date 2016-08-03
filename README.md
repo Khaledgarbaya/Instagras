@@ -9,10 +9,11 @@ How to use it?
 
 2.The main class that you'll be working with is the Instagras Call.It Static so you don't need to instantiate it.
 
-3.Sample code :    
-    
-    import net.khaledgarbaya.instagras.Instagras;
+3.Sample code :  
 
+
+```actionscript
+    import net.khaledgarbaya.instagras.Instagras;
     private var appID:String="CLIENT_ID";
 
     // init the api
@@ -45,7 +46,8 @@ How to use it?
       if(result != null);//the class has the access token and ready to use it
       login();
     }
-      
+```
+
 LICENSE
 -------
 Simplified BSD License
